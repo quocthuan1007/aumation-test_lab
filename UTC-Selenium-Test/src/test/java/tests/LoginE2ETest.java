@@ -357,6 +357,17 @@ public class LoginE2ETest extends BaseTest {
                 "Username tiếng Việt không dấu phải bị từ chối");
     }
 
+    @Test
+    @Story("TC19 — Username toàn số")
+    @Severity(SeverityLevel.MINOR)
+    @DisplayName("TC19 — Username toàn số")
+    public void TC19_usernameAllNumbers() {
+        loginPage.login("12345678", VALID_PASSWORD);
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(),
+                "Username toàn số không hợp lệ phải bị từ chối");
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================

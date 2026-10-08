@@ -61,6 +61,7 @@ public class CreateExcelTestData {
             {"TC16", "<<VALID_USERNAME>>", "a".repeat(256),      "ERROR",    "Password quá dài (256 ký tự)"},
             {"TC17", "test@gmail.com",     "<<VALID_PASSWORD>>", "ERROR",    "Username dạng email"},
             {"TC18", "nguyenvanan",        "<<VALID_PASSWORD>>", "ERROR",    "Username tiếng Việt không dấu"},
+            {"TC19", "12345678",           "<<VALID_PASSWORD>>", "ERROR",    "Username toàn số"},
         };
 
         for (int i = 0; i < data.length; i++) {
