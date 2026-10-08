@@ -17,10 +17,22 @@
 
 | ID | Username | Password | Expected Result |
 | --- | --- | --- | --- |
+| TC01 | Hợp lệ | Hợp lệ | Đăng nhập thành công |
 
 
 ---
 
 ### Chi tiết Test Cases
+
+#### TC01: validLogin
+- **Preconditions**: Có kết nối internet, web server hoạt động, trình duyệt mở ở trang Login.
+- **Test Steps**:
+  1. Nhập username hợp lệ
+  2. Nhập password hợp lệ
+  3. Click nút "Đăng nhập"
+- **Test Data**: Username và Password đúng từ biến môi trường.
+- **Expected Result**: Đăng nhập thành công, URL thay đổi, không còn ở trang Login.
+- **Actual Result**: (Tự động cập nhật khi test chạy)
+- **Status**: TO BE EXECUTED
 
 *(Các test cases tiếp theo tương tự theo bảng map bên trên)*

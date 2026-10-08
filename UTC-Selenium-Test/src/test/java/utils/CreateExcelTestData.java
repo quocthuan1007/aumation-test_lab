@@ -39,7 +39,10 @@ public class CreateExcelTestData {
         // ===== Dữ liệu test cases =====
         // Format: TC_ID | Username | Password | ExpectedResult | Description
         // ExpectedResult: "SUCCESS" = đăng nhập thành công, "ERROR" = hiển thị lỗi
-        String[][] data = {};
+        String[][] data = {
+            // ===== TC01–TC10: Test cases gốc =====
+            {"TC01", "<<VALID_USERNAME>>", "<<VALID_PASSWORD>>", "SUCCESS",  "Đăng nhập với tài khoản hợp lệ"},
+        };
 
         for (int i = 0; i < data.length; i++) {
             Row row = sheet.createRow(i + 1);

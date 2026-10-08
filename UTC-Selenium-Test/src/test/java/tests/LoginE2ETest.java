@@ -126,6 +126,25 @@ public class LoginE2ETest extends BaseTest {
     // Các test case riêng lẻ (không cần Excel, dùng để debug nhanh)
     // =====================================================================
 
+    @Test
+    @Story("TC01 — Đăng nhập hợp lệ")
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Kiểm tra đăng nhập thành công với tài khoản hợp lệ — URL phải thay đổi")
+    @DisplayName("TC01 — Đăng nhập với tài khoản hợp lệ")
+    public void TC01_validLogin() {
+        // SKIP nếu chưa set biến môi trường — không FAIL
+        assumeTrue(hasRealCredentials(),
+                "[SKIP] TC01 cần tài khoản UTC thật. " +
+                "Set biến môi trường: UTC_TEST_USERNAME và UTC_TEST_PASSWORD");
+
+        String urlBefore = driver.getCurrentUrl();
+        loginPage.login(VALID_USERNAME, VALID_PASSWORD);
+
+        String urlAfter = driver.getCurrentUrl();
+        Assertions.assertNotEquals(urlBefore, urlAfter, "URL phải thay đổi sau khi đăng nhập thành công");
+        Assertions.assertFalse(urlAfter.contains("/Login"), "Phải thoát khỏi trang /Login sau khi đăng nhập");
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================
