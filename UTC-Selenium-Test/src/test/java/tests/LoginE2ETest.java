@@ -145,6 +145,20 @@ public class LoginE2ETest extends BaseTest {
         Assertions.assertFalse(urlAfter.contains("/Login"), "Phải thoát khỏi trang /Login sau khi đăng nhập");
     }
 
+    @Test
+    @Story("TC02 — Username không tồn tại")
+    @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("TC02 — Username không tồn tại")
+    public void TC02_invalidUsername() {
+        loginPage.login("username_not_exist", VALID_PASSWORD);
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(), "Phải hiển thị thông báo lỗi");
+        Assertions.assertTrue(
+                loginPage.getErrorMessage().contains("Tài khoản hoặc mật khẩu không đúng"),
+                "Thông báo lỗi không đúng: " + loginPage.getErrorMessage()
+        );
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================

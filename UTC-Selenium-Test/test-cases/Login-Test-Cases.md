@@ -18,6 +18,7 @@
 | ID | Username | Password | Expected Result |
 | --- | --- | --- | --- |
 | TC01 | Hợp lệ | Hợp lệ | Đăng nhập thành công |
+| TC02 | Không tồn tại | Hợp lệ | Đăng nhập thất bại, hiển thị lỗi "Tài khoản hoặc mật khẩu không đúng." |
 
 
 ---
@@ -34,5 +35,13 @@
 - **Expected Result**: Đăng nhập thành công, URL thay đổi, không còn ở trang Login.
 - **Actual Result**: (Tự động cập nhật khi test chạy)
 - **Status**: TO BE EXECUTED
+
+#### TC02: invalidUsername
+- **Preconditions**: Web ở trang Login.
+- **Test Steps**:
+  1. Nhập username không tồn tại (`username_not_exist`)
+  2. Nhập password hợp lệ
+  3. Click "Đăng nhập"
+- **Expected Result**: Hiển thị thông báo lỗi "Tài khoản hoặc mật khẩu không đúng."
 
 *(Các test cases tiếp theo tương tự theo bảng map bên trên)*
