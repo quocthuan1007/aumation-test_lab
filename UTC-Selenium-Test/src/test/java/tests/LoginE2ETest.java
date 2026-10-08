@@ -173,6 +173,17 @@ public class LoginE2ETest extends BaseTest {
         );
     }
 
+    @Test
+    @Story("TC04 — Username khoảng trắng")
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("TC04 — Username chỉ có khoảng trắng")
+    public void TC04_usernameWhitespace() {
+        loginPage.login("   ", VALID_PASSWORD);
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(),
+                "Phải hiển thị lỗi khi username chỉ có khoảng trắng");
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================
