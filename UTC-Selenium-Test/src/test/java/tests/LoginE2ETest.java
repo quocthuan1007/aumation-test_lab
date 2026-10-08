@@ -263,6 +263,24 @@ public class LoginE2ETest extends BaseTest {
     }
 
     // =====================================================================
+    // TC11–TC20: Test cases mở rộng (boundary, security, format)
+    // =====================================================================
+
+    // Chuỗi 256 ký tự để test boundary
+    private static final String STRING_256 = "a".repeat(256);
+
+    @Test
+    @Story("TC11 — SQL Injection Username")
+    @Severity(SeverityLevel.BLOCKER)
+    @DisplayName("TC11 — SQL Injection trong Username")
+    public void TC11_sqlInjectionUsername() {
+        loginPage.login("' OR '1'='1", VALID_PASSWORD);
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(),
+                "Hệ thống phải từ chối SQL Injection trong username");
+    }
+
+    // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================
 

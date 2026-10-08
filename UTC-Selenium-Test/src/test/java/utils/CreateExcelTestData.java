@@ -51,6 +51,9 @@ public class CreateExcelTestData {
             {"TC08", "<<VALID_USERNAME>>", "   ",               "ERROR",    "Password chỉ có khoảng trắng"},
             {"TC09", "",                  "",                  "ERROR",    "Username và Password đều rỗng"},
             {"TC10", "username_not_exist","wrong_password",     "ERROR",    "Cả Username và Password đều sai"},
+
+            // ===== TC11–TC20: Test cases mở rộng =====
+            {"TC11", "' OR '1'='1",        "<<VALID_PASSWORD>>", "ERROR",    "SQL Injection trong Username"},
         };
 
         for (int i = 0; i < data.length; i++) {
