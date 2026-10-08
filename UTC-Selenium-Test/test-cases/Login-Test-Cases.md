@@ -34,6 +34,7 @@
 | **TC15** | 256 ký tự (boundary) | Hợp lệ | Đăng nhập thất bại, username quá dài |
 | **TC16** | Hợp lệ | 256 ký tự (boundary) | Đăng nhập thất bại, password quá dài |
 | **TC17** | Dạng email (`test@gmail.com`) | Hợp lệ | Đăng nhập thất bại, sai định dạng |
+| **TC18** | Tiếng Việt không dấu (`nguyenvanan`) | Hợp lệ | Đăng nhập thất bại |
 
 
 ---

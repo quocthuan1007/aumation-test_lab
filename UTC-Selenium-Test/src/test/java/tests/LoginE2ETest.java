@@ -346,6 +346,17 @@ public class LoginE2ETest extends BaseTest {
                 "Username dạng email phải bị từ chối");
     }
 
+    @Test
+    @Story("TC18 — Username tiếng Việt")
+    @Severity(SeverityLevel.MINOR)
+    @DisplayName("TC18 — Username tiếng Việt không dấu")
+    public void TC18_usernameVietnamese() {
+        loginPage.login("nguyenvanan", VALID_PASSWORD);
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(),
+                "Username tiếng Việt không dấu phải bị từ chối");
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================
