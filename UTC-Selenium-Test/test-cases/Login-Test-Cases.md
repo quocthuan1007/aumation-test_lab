@@ -36,6 +36,7 @@
 | **TC17** | Dạng email (`test@gmail.com`) | Hợp lệ | Đăng nhập thất bại, sai định dạng |
 | **TC18** | Tiếng Việt không dấu (`nguyenvanan`) | Hợp lệ | Đăng nhập thất bại |
 | **TC19** | Toàn số (`12345678`) | Hợp lệ | Đăng nhập thất bại |
+| **TC20** | Hợp lệ | Password có khoảng trắng giữa (`pass word 123`) | Đăng nhập thất bại |
 
 
 ---

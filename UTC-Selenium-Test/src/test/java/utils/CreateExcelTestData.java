@@ -62,6 +62,7 @@ public class CreateExcelTestData {
             {"TC17", "test@gmail.com",     "<<VALID_PASSWORD>>", "ERROR",    "Username dạng email"},
             {"TC18", "nguyenvanan",        "<<VALID_PASSWORD>>", "ERROR",    "Username tiếng Việt không dấu"},
             {"TC19", "12345678",           "<<VALID_PASSWORD>>", "ERROR",    "Username toàn số"},
+            {"TC20", "<<VALID_USERNAME>>", "pass word 123",      "ERROR",    "Password có khoảng trắng ở giữa"},
         };
 
         for (int i = 0; i < data.length; i++) {

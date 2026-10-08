@@ -368,6 +368,17 @@ public class LoginE2ETest extends BaseTest {
                 "Username toàn số không hợp lệ phải bị từ chối");
     }
 
+    @Test
+    @Story("TC20 — Password khoảng trắng giữa")
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("TC20 — Password có khoảng trắng ở giữa")
+    public void TC20_passwordWithMiddleSpaces() {
+        loginPage.login(VALID_USERNAME, "pass word 123");
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(),
+                "Password có khoảng trắng ở giữa phải bị từ chối");
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================
