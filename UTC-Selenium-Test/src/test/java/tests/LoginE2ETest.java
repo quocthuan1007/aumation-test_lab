@@ -184,6 +184,17 @@ public class LoginE2ETest extends BaseTest {
                 "Phải hiển thị lỗi khi username chỉ có khoảng trắng");
     }
 
+    @Test
+    @Story("TC05 — Username ký tự đặc biệt")
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("TC05 — Username chứa ký tự đặc biệt")
+    public void TC05_specialCharsUsername() {
+        loginPage.login("@@@###", VALID_PASSWORD);
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(),
+                "Phải hiển thị lỗi khi username có ký tự đặc biệt");
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================
