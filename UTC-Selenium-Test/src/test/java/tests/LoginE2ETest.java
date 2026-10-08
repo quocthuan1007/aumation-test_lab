@@ -335,6 +335,17 @@ public class LoginE2ETest extends BaseTest {
                 "Password 256 ký tự phải bị từ chối");
     }
 
+    @Test
+    @Story("TC17 — Username dạng email")
+    @Severity(SeverityLevel.MINOR)
+    @DisplayName("TC17 — Username dạng email")
+    public void TC17_usernameEmailFormat() {
+        loginPage.login("test@gmail.com", VALID_PASSWORD);
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(),
+                "Username dạng email phải bị từ chối");
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================
