@@ -22,6 +22,7 @@
 | TC03 | Rỗng | Hợp lệ | Hiển thị validation "Bạn chưa nhập tên đăng nhập" |
 | TC04 | Khoảng trắng | Hợp lệ | Đăng nhập thất bại / Hiển thị validation |
 | TC05 | Ký tự đặc biệt (`@@@###`) | Hợp lệ | Đăng nhập thất bại, hiển thị lỗi |
+| TC06 | Hợp lệ | Sai | Đăng nhập thất bại, hiển thị lỗi "Tài khoản hoặc mật khẩu không đúng." |
 
 
 ---
