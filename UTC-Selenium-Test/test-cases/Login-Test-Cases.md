@@ -28,6 +28,7 @@
 | TC09 | Rỗng | Rỗng | Hiển thị validation "Bạn chưa nhập tên đăng nhập" |
 | TC10 | Không tồn tại | Sai | Đăng nhập thất bại, hiển thị lỗi |
 | **TC11** | SQL Injection (`' OR '1'='1`) | Hợp lệ | Hệ thống từ chối, hiển thị lỗi |
+| **TC12** | Hợp lệ | SQL Injection (`' OR '1'='1`) | Hệ thống từ chối, hiển thị lỗi |
 
 
 ---

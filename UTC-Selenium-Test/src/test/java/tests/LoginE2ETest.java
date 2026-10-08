@@ -280,6 +280,17 @@ public class LoginE2ETest extends BaseTest {
                 "Hệ thống phải từ chối SQL Injection trong username");
     }
 
+    @Test
+    @Story("TC12 — SQL Injection Password")
+    @Severity(SeverityLevel.BLOCKER)
+    @DisplayName("TC12 — SQL Injection trong Password")
+    public void TC12_sqlInjectionPassword() {
+        loginPage.login(VALID_USERNAME, "' OR '1'='1");
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(),
+                "Hệ thống phải từ chối SQL Injection trong password");
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================

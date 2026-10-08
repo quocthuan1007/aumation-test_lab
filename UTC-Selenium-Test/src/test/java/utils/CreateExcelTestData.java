@@ -54,6 +54,7 @@ public class CreateExcelTestData {
 
             // ===== TC11–TC20: Test cases mở rộng =====
             {"TC11", "' OR '1'='1",        "<<VALID_PASSWORD>>", "ERROR",    "SQL Injection trong Username"},
+            {"TC12", "<<VALID_USERNAME>>",  "' OR '1'='1",       "ERROR",    "SQL Injection trong Password"},
         };
 
         for (int i = 0; i < data.length; i++) {
