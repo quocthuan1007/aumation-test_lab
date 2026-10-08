@@ -43,6 +43,7 @@ public class CreateExcelTestData {
             // ===== TC01–TC10: Test cases gốc =====
             {"TC01", "<<VALID_USERNAME>>", "<<VALID_PASSWORD>>", "SUCCESS",  "Đăng nhập với tài khoản hợp lệ"},
             {"TC02", "username_not_exist", "<<VALID_PASSWORD>>", "ERROR",    "Username không tồn tại"},
+            {"TC03", "",                  "<<VALID_PASSWORD>>", "ERROR",    "Username rỗng"},
         };
 
         for (int i = 0; i < data.length; i++) {

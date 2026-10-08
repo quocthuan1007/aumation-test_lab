@@ -159,6 +159,20 @@ public class LoginE2ETest extends BaseTest {
         );
     }
 
+    @Test
+    @Story("TC03 — Username rỗng")
+    @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("TC03 — Username rỗng")
+    public void TC03_emptyUsername() {
+        loginPage.login("", VALID_PASSWORD);
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(), "Phải hiển thị validation");
+        Assertions.assertTrue(
+                loginPage.getErrorMessage().contains("Bạn chưa nhập tên đăng nhập"),
+                "Thông báo lỗi không đúng: " + loginPage.getErrorMessage()
+        );
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================
