@@ -248,6 +248,20 @@ public class LoginE2ETest extends BaseTest {
         );
     }
 
+    @Test
+    @Story("TC10 — Cả hai đều sai")
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("TC10 — Cả Username và Password đều sai")
+    public void TC10_invalidUsernameAndPassword() {
+        loginPage.login("username_not_exist", "wrong_password");
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(), "Phải hiển thị thông báo lỗi");
+        Assertions.assertTrue(
+                loginPage.getErrorMessage().contains("Tài khoản hoặc mật khẩu không đúng"),
+                "Thông báo lỗi không đúng: " + loginPage.getErrorMessage()
+        );
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================

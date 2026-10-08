@@ -50,6 +50,7 @@ public class CreateExcelTestData {
             {"TC07", "<<VALID_USERNAME>>", "",                  "ERROR",    "Password rỗng"},
             {"TC08", "<<VALID_USERNAME>>", "   ",               "ERROR",    "Password chỉ có khoảng trắng"},
             {"TC09", "",                  "",                  "ERROR",    "Username và Password đều rỗng"},
+            {"TC10", "username_not_exist","wrong_password",     "ERROR",    "Cả Username và Password đều sai"},
         };
 
         for (int i = 0; i < data.length; i++) {

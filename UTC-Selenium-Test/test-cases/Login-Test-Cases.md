@@ -26,6 +26,7 @@
 | TC07 | Hợp lệ | Rỗng | Hiển thị validation "Bạn chưa nhập mật khẩu" |
 | TC08 | Hợp lệ | Khoảng trắng | Hiển thị lỗi / validation |
 | TC09 | Rỗng | Rỗng | Hiển thị validation "Bạn chưa nhập tên đăng nhập" |
+| TC10 | Không tồn tại | Sai | Đăng nhập thất bại, hiển thị lỗi |
 
 
 ---
