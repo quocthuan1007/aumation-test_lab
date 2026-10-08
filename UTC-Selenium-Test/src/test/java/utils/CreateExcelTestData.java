@@ -56,6 +56,7 @@ public class CreateExcelTestData {
             {"TC11", "' OR '1'='1",        "<<VALID_PASSWORD>>", "ERROR",    "SQL Injection trong Username"},
             {"TC12", "<<VALID_USERNAME>>",  "' OR '1'='1",       "ERROR",    "SQL Injection trong Password"},
             {"TC13", "<script>alert(1)</script>", "<<VALID_PASSWORD>>", "ERROR", "XSS attack trong Username"},
+            {"TC14", "a".repeat(1) ,       "<<VALID_PASSWORD>>", "ERROR",    "Username 1 ký tự (quá ngắn)"},
         };
 
         for (int i = 0; i < data.length; i++) {

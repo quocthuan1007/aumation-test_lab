@@ -30,6 +30,7 @@
 | **TC11** | SQL Injection (`' OR '1'='1`) | Hợp lệ | Hệ thống từ chối, hiển thị lỗi |
 | **TC12** | Hợp lệ | SQL Injection (`' OR '1'='1`) | Hệ thống từ chối, hiển thị lỗi |
 | **TC13** | XSS (`<script>alert(1)</script>`) | Hợp lệ | Hệ thống từ chối, hiển thị lỗi |
+| **TC14** | 1 ký tự (`a`) | Hợp lệ | Đăng nhập thất bại, username quá ngắn |
 
 
 ---

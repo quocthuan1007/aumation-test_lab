@@ -302,6 +302,17 @@ public class LoginE2ETest extends BaseTest {
                 "Hệ thống phải từ chối XSS trong username");
     }
 
+    @Test
+    @Story("TC14 — Username quá ngắn")
+    @Severity(SeverityLevel.MINOR)
+    @DisplayName("TC14 — Username 1 ký tự (quá ngắn)")
+    public void TC14_usernameTooShort() {
+        loginPage.login("a", VALID_PASSWORD);
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(),
+                "Username 1 ký tự phải bị từ chối");
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================
