@@ -291,6 +291,17 @@ public class LoginE2ETest extends BaseTest {
                 "Hệ thống phải từ chối SQL Injection trong password");
     }
 
+    @Test
+    @Story("TC13 — XSS Attack")
+    @Severity(SeverityLevel.BLOCKER)
+    @DisplayName("TC13 — XSS attack trong Username")
+    public void TC13_xssInUsername() {
+        loginPage.login("<script>alert(1)</script>", VALID_PASSWORD);
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(),
+                "Hệ thống phải từ chối XSS trong username");
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================
