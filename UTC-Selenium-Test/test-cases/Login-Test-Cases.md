@@ -32,6 +32,7 @@
 | **TC13** | XSS (`<script>alert(1)</script>`) | Hợp lệ | Hệ thống từ chối, hiển thị lỗi |
 | **TC14** | 1 ký tự (`a`) | Hợp lệ | Đăng nhập thất bại, username quá ngắn |
 | **TC15** | 256 ký tự (boundary) | Hợp lệ | Đăng nhập thất bại, username quá dài |
+| **TC16** | Hợp lệ | 256 ký tự (boundary) | Đăng nhập thất bại, password quá dài |
 
 
 ---

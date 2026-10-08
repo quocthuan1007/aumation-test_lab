@@ -324,6 +324,17 @@ public class LoginE2ETest extends BaseTest {
                 "Username 256 ký tự phải bị từ chối");
     }
 
+    @Test
+    @Story("TC16 — Password quá dài")
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("TC16 — Password quá dài (256 ký tự)")
+    public void TC16_passwordTooLong() {
+        loginPage.login(VALID_USERNAME, STRING_256);
+
+        Assertions.assertTrue(loginPage.isErrorMessageDisplayed(),
+                "Password 256 ký tự phải bị từ chối");
+    }
+
     // =====================================================================
     // Helper: thay placeholder trong Excel bằng credential thật
     // =====================================================================
